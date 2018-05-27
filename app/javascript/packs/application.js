@@ -9,4 +9,7 @@
 
 console.log('Hello World from Webpacker');
 
-import "src/application.css";
+import "bootstrap";
+import "bootstrap/scss/bootstrap";
+
+import "src/application.scss";

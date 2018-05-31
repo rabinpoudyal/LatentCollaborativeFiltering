@@ -53,4 +53,9 @@ require 'csv'
 # 	puts "#{r.user_id} rated #{r.movie_id} movie successfully"
 # end
 
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+#AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
+movies = Movies.all
+movies.each do |m|
+  
+end

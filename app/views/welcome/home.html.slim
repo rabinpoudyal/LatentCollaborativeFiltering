@@ -1,23 +1,31 @@
 .jumbotron.jumbotorn-fluid style="background-image: url('jumbo-image.jpg');background-position: center;background-size: cover;"
   h2.display-4 Movie Reco System
   p.lead This project uses Latent collaborative filtering approach to recommend you the movies you are most likely to watch.
-  hr.my-4/
+  hr.my-4
   p It uses utility classes for typography and spacing to space content out within the larger container.
   p.lead
     a.btn.btn-info.btn-lg.link-button href="#" role="button"  Learn more
 
-h3.display-6 Latest Movies
 .row
-  - @movies.each do |movie|
-  	.col-md-3
-  		.card.movies-card
-  		  .card-body
-  		      = image_tag "/jumbo-image.jpg", class: "card-img-top img-fluid"
-  		      .card-title.text-center 
-  		      	= movie.name
-  		      .card-text
-  		      	= movie.generes
-  		      .card-text
-  		        - average_ratings(movie).to_i.times do |icon|
-  		          span class="fa fa-star gold-star"
-  		        
+  .col-md-9
+    h3.display-6 Latest Movies
+    .row
+      - @movies.each do |movie|
+        .col-md-3
+          .card.movies-card
+            = image_tag "/jumbo-image.jpg", class: "card-img-top"
+            .card-body
+              .card-title
+                = movie.name
+              .card-text
+                = movie.generes
+                = link_to "Watch Now", root_path, class: "card-link"
+              .pull-right
+                - average_ratings(movie).to_i.times do
+                  i class="fa fa-star gold-star"
+
+  .col-md-3
+    h4.display-6 Recommended
+    - @recommended.each do |rec|
+      = rec.name
+      br

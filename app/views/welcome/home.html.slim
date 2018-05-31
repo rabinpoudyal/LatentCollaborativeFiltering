@@ -10,9 +10,9 @@ h3.display-6 Latest Movies
 .row
   - @movies.each do |movie|
   	.col-md-3
-  		.card
+  		.card.movies-card
   		  .card-body
-  		      = image_tag "/jumbo-image.jpg", class: "card-img-top"
+  		      = image_tag "/jumbo-image.jpg", class: "card-img-top img-fluid"
   		      .card-title.text-center 
   		      	= movie.name
   		      .card-text

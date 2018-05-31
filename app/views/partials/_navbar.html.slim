@@ -1,30 +1,32 @@
-nav.navbar.navbar-expand-lg.navbar-light style="background-color: #fff;height: 70px;"
-  a.navbar-brand href="#"  Latent Collaborative Filtering
-  button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button" 
-    span.navbar-toggler-icon
-  #navbarSupportedContent.collapse.navbar-collapse
-    ul.navbar-nav.ml-auto
-      li.nav-item.active
-        a.nav-link href="/" 
-          | Home
-          span.sr-only (current)
-      li.nav-item.active
-        = link_to "For You", root_path, class: "nav-link"
-      li.nav-item.active
-        = link_to "Trending", root_path, class: "nav-link"
-      li.nav-item
-        a.nav-link href="#"  Don't Miss
-      - if user_signed_in?
-        li.nav-item.dropdown
-          a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
-            = image_tag gravatar_url(current_user), class: "avatar-thumbnail rounded-circle navbar-item"
-            span &nbsp;
-            = current_user.email
-          .dropdown-menu aria-labelledby="navbarDropdown" 
-            a.dropdown-item href="#"  Action
-            = link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item"
-            a.dropdown-item href="#"  Another action
-            .dropdown-divider
-            a.dropdown-item href="#"  Something else here
+nav.navbar.navbar-expand-lg.navbar-light style="background-color: #fff;"
+  .container
+    a.navbar-brand href="#"  LCFiltering
+    button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button" 
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item.active
+          a.nav-link href="/" 
+            | &nbsp;HOME
+            span.sr-only (current)
+        li.nav-item.active
+          = link_to "FOR YOU", root_path, class: "nav-link"
+        li.nav-item.active
+          = link_to "TRENDING", root_path, class: "nav-link"
+        li.nav-item
+          a.nav-link href="#"  DON'T MISS
+        - if user_signed_in?
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
+              = image_tag gravatar_url(current_user), class: "avatar-thumbnail rounded-circle navbar-item"
+              span &nbsp;
+              = current_user.full_name
+            .dropdown-menu aria-labelledby="navbarDropdown" 
+              = link_to "Profile", profile_path, class: "dropdown-item"
+              = link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item"
+              = link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item"
+              a.dropdown-item href="#"  Another action
+              .dropdown-divider
+              a.dropdown-item href="#"  Something else here
       
     

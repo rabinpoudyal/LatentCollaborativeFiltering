@@ -1,2 +1,23 @@
-h1 Welcome#home
-p Find me in app/views/welcome/home.html.slim
+.jumbotron.jumbotorn-fluid style="background-image: url('jumbo-image.jpg');background-position: center;background-size: cover;"
+  h2.display-4 Movie Reco System
+  p.lead This project uses Latent collaborative filtering approach to recommend you the movies you are most likely to watch.
+  hr.my-4/
+  p It uses utility classes for typography and spacing to space content out within the larger container.
+  p.lead
+    a.btn.btn-info.btn-lg.link-button href="#" role="button"  Learn more
+
+h3.display-6 Latest Movies
+.row
+  - @movies.each do |movie|
+  	.col-md-3
+  		.card
+  		  .card-body
+  		      = image_tag "/jumbo-image.jpg", class: "card-img-top"
+  		      .card-title.text-center 
+  		      	= movie.name
+  		      .card-text
+  		      	= movie.generes
+  		      .card-text
+  		        - average_ratings(movie).to_i.times do |icon|
+  		          span class="fa fa-star gold-star"
+  		        

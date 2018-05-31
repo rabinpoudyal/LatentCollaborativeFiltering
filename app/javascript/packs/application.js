@@ -11,5 +11,6 @@ console.log('Hello World from Webpacker');
 
 import "bootstrap";
 import "bootstrap/scss/bootstrap";
+import 'font-awesome/scss/font-awesome.scss';
 
 import "src/application.scss";

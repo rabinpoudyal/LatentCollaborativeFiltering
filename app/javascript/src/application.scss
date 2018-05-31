@@ -6,8 +6,8 @@ body{
 
 .navbar-brand{
 	color: #FF5A5F !important;
-	font-size: 2em;
-	font-weight: 400;
+	//font-size: 2em;
+	//font-weight: 40;
 }
 
 a{
@@ -20,8 +20,33 @@ a:hover{
 
 }
 
+.btn-info{
+	color: #fff !important;
+}
+
 // avatar
 
 .avatar-thumbnail{
 	width: 30px;
+}
+
+// forms
+
+.webforms{
+	background-color: #fff;
+	margin-top: 10%;
+	padding: 2%;
+}
+.webforms input{
+	border-radius: 2px;
+}
+
+// jumbotorn image
+.jumbotron h2, .jumbotron p, .jumbotron hr{
+	color: #fff;
+}
+
+// star
+.gold-star{
+	color: blue;
 }

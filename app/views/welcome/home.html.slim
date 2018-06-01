@@ -16,7 +16,7 @@
             = image_tag "/jumbo-image.jpg", class: "card-img-top"
             .card-body
               .card-title
-                = movie.name
+                = link_to movie.name, movie_path(movie)
               .card-text
                 = movie.generes
                 = link_to "Watch Now", root_path, class: "card-link"
@@ -27,5 +27,7 @@
   .col-md-3
     h4.display-6 Recommended
     - @recommended.each do |rec|
-      = rec.name
+      = link_to rec.name, movie_path(rec)
       br
+    - @rated_by.each do |rat|
+      = rat.user_id

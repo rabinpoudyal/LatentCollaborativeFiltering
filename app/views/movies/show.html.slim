@@ -1,2 +1,12 @@
-h1 Movies#show
-p Find me in app/views/movies/show.html.slim
+.row
+  .col-md-6
+    = image_tag "/jumbo-image.jpg", class: "img-fluid"
+    
+
+
+  .col-md-6
+    .h2.display-6
+      = @movie.name
+      hr
+      - average_ratings(@movie).to_i.times do |icon|
+        span class="fa fa-star gold-star"

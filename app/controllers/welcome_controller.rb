@@ -2,6 +2,7 @@ class WelcomeController < ApplicationController
   def home
     @movies = Movie.all.limit(40)
     @recommended = Movie.last(10)
+    @rated_by = current_user.ratings
   end
 
   def about

@@ -57,5 +57,5 @@ require 'csv'
 
 movies = Movies.all
 movies.each do |m|
-  
+
 end

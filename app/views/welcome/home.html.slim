@@ -19,7 +19,7 @@
                 = link_to movie.name, movie_path(movie)
               .card-text
                 = movie.generes
-                = link_to "Watch Now", root_path, class: "card-link"
+                = link_to "Watch Now", root_path, class: "btn btn-info btn-sm card-link"
               .pull-right
                 - average_ratings(movie).to_i.times do
                   i class="fa fa-star gold-star"

@@ -1,12 +1,14 @@
 .row
   .col-md-6
     = image_tag "/jumbo-image.jpg", class: "img-fluid"
-    
-
-
   .col-md-6
     .h2.display-6
       = @movie.name
       hr
       - average_ratings(@movie).to_i.times do |icon|
         span class="fa fa-star gold-star"
+      hr
+      = link_to("Rate", root_path)
+      hr
+      h2.display-6 Your Information
+      

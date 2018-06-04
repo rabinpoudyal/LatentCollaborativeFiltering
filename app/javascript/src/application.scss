@@ -30,6 +30,10 @@ a:hover{
 	width: 30px;
 }
 
+.avatar-full{
+	width: 90px;
+}
+
 // forms
 
 .webforms{
@@ -55,4 +59,9 @@ a:hover{
 
 .movies-card{
 	margin-bottom: 30px;
+}
+
+.jumbotron{
+	//margin: 0px !important;
+	border-radius: 0px;
 }

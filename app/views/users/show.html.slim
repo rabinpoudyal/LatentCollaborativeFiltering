@@ -1,0 +1,26 @@
+- content_for(:title) do
+	p Profile
+
+
+
+.row
+  .col-md-4
+	h2.display-6 Your Information
+
+
+	.card
+	  = image_tag gravatar_url(current_user), class: "card-img-top avatar-full"
+	  .card-body
+	    .card-title
+	      .h6.display-6
+	        = current_user.first_name
+	        hr
+	        = current_user.last_name
+	        hr
+	        = current_user.email
+	        hr
+	        = current_user.age
+	        hr
+	        = current_user.gender
+	        hr
+	        = current_user.occupation

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'genre/index'
+  get 'genre/new'
+  get 'genre/create'
+  get 'genre/show'
+  get 'genre/edit'
+  get 'genre/update'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root to: 'welcome#home'
